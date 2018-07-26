@@ -11,7 +11,7 @@ The Docker image created by this code is conveniently available on [Docker Hub](
 ```
 docker pull merxnet/xmrig-nvidia
 ```
-To get started, install the NVIDIA drivers, CUDA toolkit, NVIDIA runtime for Docker on your host machine (see the [Host Configuration](#Host-Configuration) section below). Once complete, all you need is a [wallet](https://getmonero.org/resources/user-guides/create_wallet.html) and a [mining pool](https://monero.org/services/mining-pools/) of your choice, such as [Moria](https://moriaxmr.com/). This information can be provided on the command line at run time:
+To get started, install the NVIDIA drivers, CUDA toolkit, NVIDIA runtime for Docker on your host machine (see the [Host Configuration](#host-configuration) section below). Once complete, all you need is a [wallet](https://getmonero.org/resources/user-guides/create_wallet.html) and a [mining pool](https://monero.org/services/mining-pools/) of your choice, such as [Moria](https://moriaxmr.com/). This information can be provided on the command line at run time:
 ```
 nvidia-docker run merxnet/xmrig-nvidia -o ${POOL} -u ${WALLET}
 ```
