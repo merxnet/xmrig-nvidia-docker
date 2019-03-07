@@ -5,11 +5,11 @@ ARG DISTRO=ubuntu18.04
 
 FROM nvidia/cuda:${CUDA_VERSION}-${BUILD_FLAVOR}-${DISTRO} AS build
 
-ENV VERSION 'v2.14.0'
+ENV VERSION 'v2.11.0'
 ENV CMAKE_OPTS='-DCMAKE_C_COMPILER=gcc-7 -DCMAKE_CXX_COMPILER=g++-7 -DWITH_AEON=OFF -DWITH_HTTPD=OFF'
 
 RUN apt-get -y update && apt-get -y upgrade
-RUN apt-get -y install git build-essential cmake libuv1-dev libmicrohttpd-dev
+RUN apt-get -y install git build-essential cmake libuv1-dev libmicrohttpd-dev libssl-dev
 
 RUN git clone https://github.com/xmrig/xmrig-nvidia.git
 RUN cd xmrig-nvidia && git checkout ${VERSION} && mkdir build
